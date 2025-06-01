@@ -13,6 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
+// Add Swagger services
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 builder.Services.AddDbContext<HealthBridgeDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -27,7 +31,17 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
+
+    // Enable Swagger middleware
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+// Enable CORS for frontend connection
+app.UseCors(policy =>
+    policy.WithOrigins("http://localhost:3000") // Adjust frontend URL and port if different
+          .AllowAnyHeader()
+          .AllowAnyMethod());
 
 app.UseRouting();
 
