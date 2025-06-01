@@ -1,0 +1,86 @@
+# .NET Core
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Microsoft Azure Build Artifacts
+csx/
+*.build.csdef
+
+# Microsoft Visual Studio Code
+.vscode/
+
+# Others
+*.log
+*.vspscc
+*.vssscc
+*.dbmdl
+*.bak
+*.backup
+*.cache
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+*.pidb
+*.svclog
+*.scc
+
+# DotCover
+.idea/.idea.DotSettings.user
+
+# JetBrains Rider
+.idea/
+
+# User secrets
+secrets.json
+
+# Entity Framework Core
+Migrations/
+
+# Local DB
+*.mdf
+*.ldf
+
+# Environment variables
+.env
+.env.local
+.env.*.local
