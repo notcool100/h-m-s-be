@@ -1,4 +1,3 @@
-using System;
 
 namespace Core.Entities
 {

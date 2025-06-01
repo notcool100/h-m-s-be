@@ -1,8 +1,8 @@
 namespace Core.Enums{
-public enum AppointmentStatus
+    public enum AmbulanceStatus
 {
     Pending,
-    Confirmed,
+    Dispatched,
     Completed,
     Cancelled
 }
