@@ -1,2 +1,8 @@
-namespace Core.Enums;
-public enum OrderStatus { Processing, Shipped, Delivered }
+namespace Core.Enums{
+public enum OrderStatus
+{
+    Processing,
+    Shipped,
+    Delivered
+}
+}

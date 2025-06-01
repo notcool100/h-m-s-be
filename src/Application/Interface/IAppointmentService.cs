@@ -1,12 +1,13 @@
 using System.Collections.Generic;
-using Core.Entities;
+using Application.Dto;
 
 namespace Application.Interface
 {
     public interface IAppointmentService
     {
-        Appointment GetAppointmentById(int id);
-        IEnumerable<Appointment> GetAppointmentsByPatientId(int patientId);
-        void AddAppointment(Appointment appointment);
+        Task<Appointment> BookAppointmentAsync(AppointmentRequestDto appointmentDto);
+    Task<IEnumerable<Appointment>> GetPatientAppointmentsAsync(Guid patientId);
+    Task CancelAppointmentAsync(Guid appointmentId);
+    Task ConfirmAppointmentAsync(Guid appointmentId);
     }
 }

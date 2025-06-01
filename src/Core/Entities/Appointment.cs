@@ -2,15 +2,19 @@ using System;
 
 namespace Core.Entities
 {
-    public class Appointment
-    {
-        public int Id { get; set; }
-        public int PatientId { get; set; }
-        public int DoctorId { get; set; }
-        public DateTime AppointmentDate { get; set; }
-        public string TimeSlot { get; set; }
-        public string Symptoms { get; set; }
-        public string Status { get; set; } // e.g., Scheduled, Completed, Cancelled
-        public int? PrescriptionId { get; set; }
-    }
+  public class Appointment
+{
+    public Guid Id { get; set; }
+    public Guid PatientId { get; set; }
+    public Patient Patient { get; set; }
+    public Guid DoctorId { get; set; }
+    public Doctor Doctor { get; set; }
+    public DateTime AppointmentDate { get; set; }
+    public TimeSlot TimeSlot { get; set; }
+    public string? Symptoms { get; set; }
+    public string? Notes { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public AppointmentStatus Status { get; set; } = AppointmentStatus.Pending;
+}
+
 }

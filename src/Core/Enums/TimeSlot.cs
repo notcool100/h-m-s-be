@@ -1,2 +1,8 @@
-namespace Core.Enums;
-public enum TimeSlot { Morning, Afternoon, Evening }
+namespace Core.Enums{
+public enum TimeSlot
+{
+    Morning,
+    Afternoon,
+    Evening
+}
+}
